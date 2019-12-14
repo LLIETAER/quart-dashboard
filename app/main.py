@@ -4,7 +4,18 @@
 """
 Load configuration settings
 """
-from quart import Quart
+from loguru import logger
+from quart import (
+    Blueprint,
+    Quart,
+    abort,
+    redirect,
+    render_template,
+    request,
+    session,
+    url_for,
+)
+
 from com_lib.logging_config import config_logging
 from settings import (
     APP_VERSION,
@@ -28,12 +39,14 @@ config_logging()
 logger.info("API Logging inititated")
 
 
-
 app = Quart(__name__)
 
-@app.route('/')
+main_route = Blueprint("main", __name__)
+
+
+@app.route("/")
 async def hello():
-    return 'Hello World'
+    return await render_template("index.html")  # , error=error)
 
 
 if __name__ == "__main__":

@@ -1,9 +1,9 @@
 bcrypt==3.1.7 # Change from none
+gunicorn==20.0.4 # Change from none
 loguru==0.4.0 # Change from 0.3.2
 passlib==1.7.2 # Change from none
 python-dotenv==0.10.3 # Change from none
+quart==0.10.0 # Change from none
 requests==2.22.0
 tqdm==4.40.2 # Change from 4.39.0
-gunicorn==20.0.4 # Change from none
-quart==0.10.0 # Change from none
 uvicorn==0.10.8 # Change from none
