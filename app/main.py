@@ -5,48 +5,56 @@
 Load configuration settings
 """
 from loguru import logger
-from quart import (
-    Blueprint,
-    Quart,
-    abort,
-    redirect,
-    render_template,
-    request,
-    session,
-    url_for,
-)
+from quart import Blueprint
+from quart import Quart
+from quart import abort
+from quart import redirect
+from quart import render_template
+from quart import request
+from quart import session
+from quart import url_for
 
 from com_lib.logging_config import config_logging
-from settings import (
-    APP_VERSION,
-    HOST_DOMAIN,
-    LICENSE_LINK,
-    LICENSE_TYPE,
-    LOGURU_BACKTRACE,
-    LOGURU_RETENTION,
-    LOGURU_ROTATION,
-    OWNER,
-    RELEASE_ENV,
-    SECRET_KEY,
-    SQLALCHEMY_DATABASE_URI,
-    WEBSITE,
-)
+from settings import APP_VERSION
+from settings import HOST_DOMAIN
+from settings import LICENSE_LINK
+from settings import LICENSE_TYPE
+from settings import LOGURU_RETENTION
+from settings import LOGURU_ROTATION
+from settings import OWNER
+from settings import RELEASE_ENV
+from settings import SECRET_KEY
+from settings import SQLALCHEMY_DATABASE_URI
+from settings import WEBSITE
 
-"""
-Init logging
-"""
-config_logging()
-logger.info("API Logging inititated")
+from endpoints.pages.views import pages
 
-
+# initiate the app
 app = Quart(__name__)
 
-main_route = Blueprint("main", __name__)
+# initiate logging
+config_logging()
+logger.info("Application Logging inititated")
+
+app.register_blueprint(pages, url_prefix='/pages')
 
 
 @app.route("/")
-async def hello():
+@app.route("/index")
+async def index():
     return await render_template("index.html")  # , error=error)
+
+@app.route("/index2")
+async def index_two():
+    return await render_template("index2.html")  # , error=error)
+
+@app.route("/index3")
+async def index_three():
+    return await render_template("index3.html")  # , error=error)
+
+# main_route = Blueprint("main", __name__)
+
+
 
 
 if __name__ == "__main__":
