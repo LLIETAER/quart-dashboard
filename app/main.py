@@ -4,6 +4,7 @@
 """
 Load configuration settings
 """
+from quart import Quart
 from com_lib.logging_config import config_logging
 from settings import (
     APP_VERSION,
@@ -23,28 +24,17 @@ from settings import (
 """
 Init logging
 """
-# config_logging()
-# logger.info("API Logging inititated")
+config_logging()
+logger.info("API Logging inititated")
 
 
-def main():
-    thing = [
-        APP_VERSION,
-        OWNER,
-        WEBSITE,
-        LICENSE_TYPE,
-        LICENSE_LINK,
-        HOST_DOMAIN,
-        RELEASE_ENV,
-        SQLALCHEMY_DATABASE_URI,
-        SECRET_KEY,
-        LOGURU_BACKTRACE,
-        LOGURU_RETENTION,
-        LOGURU_ROTATION,
-    ]
-    for t in thing:
-        print(t)
+
+app = Quart(__name__)
+
+@app.route('/')
+async def hello():
+    return 'Hello World'
 
 
 if __name__ == "__main__":
-    main()
+    uvicorn.run(app, host="0.0.0.0", port=5000, log_level="info")
