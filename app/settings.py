@@ -1,36 +1,41 @@
 # -*- coding: utf-8 -*-
-""" Application configuration """
+"""Application configuration.
+Most configuration is set via environment variables.
+For local development, use a .env file to set
+environment variables.
+"""
 
 import os
 
 from dotenv import load_dotenv
 
 load_dotenv()
-"""
-Application description settings
-"""
-APP_VERSION = os.environ.get("APP_VERSION", default="1.0.0")
-OWNER = os.environ.get("OWNER", default="Mike")
-WEBSITE = os.environ.get("WEBSITE", default="http://test.com")
-LICENSE_TYPE = os.environ.get("LICENSE_TYPE", default="MIT")
-LICENSE_LINK = os.environ.get("LICENSE_LINK", default="https://github.com/")
 
-
-"""
-General Application Settings
-"""
-HOST_DOMAIN = os.environ.get("HOST_DOMAIN", default="http://github.com")
-RELEASE_ENV = os.environ.get("RELEASE_ENV", default="prd")
-SQLALCHEMY_DATABASE_URI = os.environ.get(
-    "SQLALCHEMY_DATABASE_URI", default="sqlite:///data_base/app.db"
+# Application information
+APP_VERSION = os.getenv("APP_VERSION", "1.0.0")
+OWNER = os.getenv("OWNER", "Mike Ryan")
+WEBSITE = os.getenv("WEBSITE", "https://devsetgo.com")
+LICENSE_TYPE = os.getenv("LICENSE_TYPE", "MIT")
+LICENSE_LINK = os.getenv(
+    "LICENSE_LINK", "https://github.com/devsetgo/starlette-SRTDashboard"
 )
-SECRET_KEY = os.environ.get("", default="secret-key-change-this")
 
-"""
-Loguru settings
-"""
-LOGURU_BACKTRACE = False
-if RELEASE_ENV.lower() == "dev":
-    LOGURU_BACKTRACE = True
-LOGURU_RETENTION = os.environ.get("LOGURU_RETENTION", default="10 days")
-LOGURU_ROTATION = os.environ.get("LOGURU_ROTATION", default="10 MB")
+# Demo Data
+CREATE_SAMPLE_DATA = os.getenv("CREATE_SAMPLE_DATA", True)
+
+
+# Application Configurations
+HOST_DOMAIN = os.getenv("HOST_DOMAIN", "https://devsetgo.com")
+RELEASE_ENV = os.getenv("RELEASE_ENV", "prd")
+SQLALCHEMY_DATABASE_URI = os.getenv(
+    "SQLALCHEMY_DATABASE_URI", "sqlite:///sqlite_db/api.db"
+)
+
+# Loguru settings
+LOGURU_RETENTION = os.getenv("LOGURU_RETENTION", "10 days")
+LOGURU_ROTATION = os.getenv("LOGURU_ROTATION", "10 MB")
+
+# Access Token Settings
+SECRET_KEY = os.getenv("SECRET_KEY", "secret-key-1234567890")
+ALGORITHM = os.getenv("ALGORITHM", "HS256")
+ACCESS_TOKEN_EXPIRE_MINUTES = os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", 10080)

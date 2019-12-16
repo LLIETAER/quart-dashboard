@@ -1,0 +1,49 @@
+./main.py:7:1: E402 module level import not at top of file
+./main.py:8:1: E402 module level import not at top of file
+./main.py:8:1: F401 'quart.Blueprint' imported but unused
+./main.py:8:1: F401 'quart.Response' imported but unused
+./main.py:8:1: F401 'quart.redirect' imported but unused
+./main.py:8:1: F401 'quart.request' imported but unused
+./main.py:8:1: F401 'quart.session' imported but unused
+./main.py:8:1: F401 'quart.url_for' imported but unused
+./main.py:20:1: E402 module level import not at top of file
+./main.py:20:1: F401 'flask_login.login_required' imported but unused
+./main.py:21:1: E402 module level import not at top of file
+./main.py:22:1: E402 module level import not at top of file
+./main.py:23:1: E402 module level import not at top of file
+./main.py:24:1: E402 module level import not at top of file
+./main.py:24:1: F401 'settings.APP_VERSION' imported but unused
+./main.py:24:1: F401 'settings.HOST_DOMAIN' imported but unused
+./main.py:24:1: F401 'settings.LICENSE_LINK' imported but unused
+./main.py:24:1: F401 'settings.LICENSE_TYPE' imported but unused
+./main.py:24:1: F401 'settings.LOGURU_RETENTION' imported but unused
+./main.py:24:1: F401 'settings.LOGURU_ROTATION' imported but unused
+./main.py:24:1: F401 'settings.OWNER' imported but unused
+./main.py:24:1: F401 'settings.RELEASE_ENV' imported but unused
+./main.py:24:1: F401 'settings.SECRET_KEY' imported but unused
+./main.py:24:1: F401 'settings.SQLALCHEMY_DATABASE_URI' imported but unused
+./main.py:24:1: F401 'settings.WEBSITE' imported but unused
+./main.py:73:5: F841 local variable 'template' is assigned to but never used
+./main.py:93:1: F811 redefinition of unused 'not_found_error' from line 88
+./gunicorn_cfg.py:4:89: E501 line too long (101 > 88 characters)
+./gunicorn_cfg.py:7:1: F401 'multiprocessing' imported but unused
+./gunicorn_cfg.py:23:89: E501 line too long (100 > 88 characters)
+./gunicorn_cfg.py:24:89: E501 line too long (109 > 88 characters)
+./com_lib/demo_data.py:11:1: F401 'fastapi.BackgroundTasks' imported but unused
+./com_lib/demo_data.py:12:1: F401 'starlette.testclient.TestClient' imported but unused
+./com_lib/demo_data.py:63:9: F841 local variable 'user_id' is assigned to but never used
+./com_lib/demo_data.py:107:9: F841 local variable 'db_call' is assigned to but never used
+./com_lib/logging_config.py:21:89: E501 line too long (105 > 88 characters)
+./endpoints/user/views.py:20:9: F821 undefined name 'abort'
+./endpoints/user/views.py:31:9: F821 undefined name 'abort'
+./endpoints/user/views.py:42:9: F821 undefined name 'abort'
+./endpoints/user/views.py:53:9: F821 undefined name 'abort'
+./endpoints/user/views.py:64:9: F821 undefined name 'abort'
+./endpoints/pages/views.py:6:1: F401 'quart.Quart' imported but unused
+./endpoints/pages/views.py:6:1: F401 'quart.Response' imported but unused
+./endpoints/pages/views.py:6:1: F401 'quart.redirect' imported but unused
+./endpoints/pages/views.py:6:1: F401 'quart.request' imported but unused
+./endpoints/pages/views.py:6:1: F401 'quart.session' imported but unused
+./endpoints/pages/views.py:6:1: F401 'quart.url_for' imported but unused
+./endpoints/pages/functions.py:10:89: E501 line too long (89 > 88 characters)
+./endpoints/pages/functions.py:13:89: E501 line too long (107 > 88 characters)
