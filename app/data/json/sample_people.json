@@ -1,0 +1,20 @@
+[
+    {
+        "userId": "18d60fbc-1f99-11ea-aef3-0242ac110008",
+        "user_name": "string",
+        "firstName": "string",
+        "lastName": "string",
+        "company": "string",
+        "title": "string",
+        "isActive": true
+    },
+    {
+        "userId": "3a3e14f6-1f99-11ea-85a9-0242ac110008",
+        "user_name": "bob",
+        "firstName": "string",
+        "lastName": "string",
+        "company": "string",
+        "title": "string",
+        "isActive": true
+    }
+]
