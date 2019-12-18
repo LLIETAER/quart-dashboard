@@ -5,35 +5,13 @@
 Load configuration settings
 """
 from loguru import logger
-from quart import (
-    Blueprint,
-    Quart,
-    Response,
-    abort,
-    redirect,
-    render_template,
-    request,
-    session,
-    url_for,
-)
+from quart import Quart
+from quart import abort
+from quart import render_template
 
-from flask_login import login_required
 from com_lib.logging_config import config_logging
 from endpoints.pages.views import pages
 from endpoints.user.views import user
-from settings import (
-    APP_VERSION,
-    HOST_DOMAIN,
-    LICENSE_LINK,
-    LICENSE_TYPE,
-    LOGURU_RETENTION,
-    LOGURU_ROTATION,
-    OWNER,
-    RELEASE_ENV,
-    SECRET_KEY,
-    SQLALCHEMY_DATABASE_URI,
-    WEBSITE,
-)
 
 
 def create_blueprints():

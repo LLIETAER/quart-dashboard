@@ -4,7 +4,6 @@ Configuration of Gunicorn to serve application utilizing Uvicorn
 gunicorn config reference: https://github.com/benoitc/gunicorn/blob/master/examples/example_config.py
 """
 
-import multiprocessing
 
 # ip and port to bind
 bind = "0.0.0.0:5000"

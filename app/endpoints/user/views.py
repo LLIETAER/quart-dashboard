@@ -3,7 +3,8 @@
 user and account routes
 """
 from loguru import logger
-from quart import Blueprint, render_template
+from quart import Blueprint
+from quart import render_template
 
 user = Blueprint("user", __name__, url_prefix="/user")
 
