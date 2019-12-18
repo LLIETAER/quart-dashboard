@@ -6,11 +6,12 @@ import asyncio
 from app.main import app
 
 
-@pytest.fixture(name='testapp')
+@pytest.fixture(name="testapp")
 def _test_app():
     return app
 
-@pytest.mark.asyncio        
+
+@pytest.mark.asyncio
 async def test_pages_tables(testapp):
     pages = ["data", "jsgrid", "simple"]
 
@@ -20,7 +21,8 @@ async def test_pages_tables(testapp):
         response = await client.get(url)
         assert response.status_code == 200
 
-@pytest.mark.asyncio        
+
+@pytest.mark.asyncio
 async def test_pages_tables_error(testapp):
     uid = uuid.uuid1()
     url = f"/pages/tables/{uid}"
