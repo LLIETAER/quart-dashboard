@@ -4,7 +4,7 @@ user and account routes
 """
 from loguru import logger
 from quart import Blueprint
-from quart import render_template
+from quart import render_template, abort
 
 user = Blueprint("user", __name__, url_prefix="/user")
 
