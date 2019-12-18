@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 import unittest
+
 import pytest
-from app.main import app
+
 from endpoints.pages.functions import call_api
 
 

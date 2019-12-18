@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
-import unittest
 import uuid
+
 import pytest
-import asyncio
 
 # from app.main import QUART_APP as app
 from main import app
