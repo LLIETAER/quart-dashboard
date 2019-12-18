@@ -1,15 +1,16 @@
 # -*- coding: utf-8 -*-
 import random
 import uuid
-from datetime import datetime, timedelta
+from datetime import datetime
+from datetime import timedelta
 
 from loguru import logger
 
 import silly
-from db_setup import database, todos, users
+from db_setup import database
+from db_setup import todos
+from db_setup import users
 from endpoints.sillyusers.gen_user import user_test_info
-from fastapi import BackgroundTasks
-from starlette.testclient import TestClient
 from unsync import unsync
 
 NUMBER_TASKS = 10

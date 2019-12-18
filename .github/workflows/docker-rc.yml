@@ -21,7 +21,7 @@ jobs:
         cd app
         CAL_VER=$(TZ=America/New_York date +"%y-%m-%d")
         echo 'Docker Build'
-        docker build . -t mikeryan56/starlette-dashboard:$CAL_VER-rc
-        docker push mikeryan56/starlette-dashboard:$CAL_VER-rc
+        docker build . -t mikeryan56/quart-dashboard:$CAL_VER-rc
+        docker push mikeryan56/quart-dashboard:$CAL_VER-rc
 
 

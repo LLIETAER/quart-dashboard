@@ -3,17 +3,9 @@
 page routes for template
 """
 from loguru import logger
-from quart import (
-    Blueprint,
-    Quart,
-    Response,
-    abort,
-    redirect,
-    render_template,
-    request,
-    session,
-    url_for,
-)
+from quart import Blueprint
+from quart import abort
+from quart import render_template
 
 pages = Blueprint("pages", __name__, url_prefix="/pages")
 # pages = Blueprint("pages", __name__, url_prefix="/pages", static_folder="../static")
