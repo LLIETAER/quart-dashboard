@@ -22,7 +22,7 @@ SonarCloud:
 
 # Quart - Dashboard Template (pre-release)
 
-Note: The template has thousands of issues according to SonarCloud. All are due to template issues and issues within JavaScript for UI dependencies. Working on determining a way to solve these issues.
+**Note:** The template has thousands of issues according to SonarCloud. All are due to template issues and issues within JavaScript for UI dependencies. Working on determining a way to solve these issues.
 
 Utilizing Quart to render the [AdminLTE v3.01](https://github.com/ColorlibHQ/AdminLTE) template. This is a basic example to be used as the base/skeleton/template for Quart applciations.
 
