@@ -4,9 +4,8 @@ networks:
     external: true
 services:
   srtdash:
-    build: ./app
-    image: mikeryan56/starlette-srtdash:19.8.10
-    # image: mikeryan56/starlette-srtdash:latest
+    # build: ./app
+    image: mikeryan56/quart-dashboard:latest
     restart: always
     ports:
     - "5000"
@@ -21,9 +20,9 @@ services:
     #if using traefik
     labels:
     - "traefik.enable=true"
-    - "traefik.http.routers.stardash.rule=Host(`stardash.devsetgo.com`)"
-    - "traefik.http.routers.stardash.entrypoints=websecure"
-    - "traefik.http.routers.stardash.tls.certresolver=mytlschallenge"
+    - "traefik.http.routers.quart-dashboard.rule=Host(`quart-dashboard.devsetgo.com`)"
+    - "traefik.http.routers.quart-dashboard.entrypoints=websecure"
+    - "traefik.http.routers.quart-dashboard.tls.certresolver=mytlschallenge"
     networks:
       - web
   # deploy:
